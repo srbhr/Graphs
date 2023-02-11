@@ -3,4 +3,5 @@ Data structures and algorithms concepts and solutions to various problems in mul
 
 ## Arrays
 
-[Kadane's Algorithm](Arrays/Kadane/Readme.md)
+[Kadane's Algorithm](Arrays/Kadane/)
+[Sliding Window](Arrays/SlidingWindow/)
