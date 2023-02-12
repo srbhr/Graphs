@@ -18,7 +18,6 @@ class MaxSumSubarray {
                 maxSum = currSum;
                 start = j + 1;
                 end = i;
-
             }
             if (currSum < 0) {
                 currSum = 0;
