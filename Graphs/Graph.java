@@ -28,20 +28,21 @@ public class Graph {
 
         int n; // vertices
         int e; // edges
-        Scanner sc = new Scanner(System.in);
-        // Get the number of nodes and edges in the graph so far.
-        // Note: max no of edges = n(n-1)/2, min no = 0
-        n = sc.nextInt();
-        e = sc.nextInt();
-        int [][] edges = new int[n][n];
+        try (Scanner sc = new Scanner(System.in)) {
+            // Get the number of nodes and edges in the graph so far.
+            // Note: max no of edges = n(n-1)/2, min no = 0
+            n = sc.nextInt();
+            e = sc.nextInt();
+            int[][] edges = new int[n][n];
 
-        // Inserting the values in the Adjacency Matrix.
-        for (int i = 0; i < e; i++) {
-        int vertexOne = sc.nextInt();
-        int vertexTwo = sc.nextInt();
-        edges[vertexOne][vertexTwo] = 1;
-        edges[vertexTwo][vertexOne] = 1; // mirror is also added right here.
+            // Inserting the values in the Adjacency Matrix.
+            for (int i = 0; i < e; i++) {
+                int vertexOne = sc.nextInt();
+                int vertexTwo = sc.nextInt();
+                edges[vertexOne][vertexTwo] = 1;
+                edges[vertexTwo][vertexOne] = 1; // mirror is also added right here.
+            }
+            printDFSHelper(edges);
         }
-        printDFSHelper(edges);
     }
 }
