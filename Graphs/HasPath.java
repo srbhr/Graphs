@@ -1,27 +1,27 @@
 import java.util.Scanner;
 
-public class Graph {
+public class HasPath {
 
-    public static void PrintDFSHelper(int[][] edges, int startingVertex, boolean[] visited) {
+    public static void PrintDFSHelper(int[][] edges, int startingVertex, int endVertex, boolean[] visited) {
         System.out.println(startingVertex);
         visited[startingVertex] = true;
         int n = edges.length;
+        if (startingVertex == endVertex) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
 
         for (int i = 0; i < n; i++) {
             if (edges[startingVertex][i] == 1 && !visited[i]) {
-                PrintDFSHelper(edges, i, visited);
+                PrintDFSHelper(edges, i, endVertex, visited);
             }
         }
     }
 
-    public static void DFS(int[][] edges) {
+    public static void DFS(int[][] edges, int startingVertex, int endVertex) {
         boolean[] visited = new boolean[edges.length]; // 8
-        for (int i = 0; i < edges.length; i++) {
-            if (!visited[i]) {
-                System.out.println("DFS Called");
-                PrintDFSHelper(edges, i, visited);
-            }
-        }
+        PrintDFSHelper(edges, startingVertex, endVertex, visited);
     }
 
     public static void main(String[] args) {
@@ -42,7 +42,8 @@ public class Graph {
                 edges[vertexOne][vertexTwo] = 1;
                 edges[vertexTwo][vertexOne] = 1; // mirror is also added right here.
             }
-            DFS(edges);
+
+            DFS(edges, 0, 5);
         }
     }
 }
