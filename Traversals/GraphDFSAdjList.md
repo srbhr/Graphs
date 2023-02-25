@@ -1,4 +1,4 @@
-#Depth First Search Using Adjacency List 
+#Depth First Search Using Adjacency List </br>
 ##DFS Algorithm:
 
 The general process of exploring a graph using depth first search includes the following steps:-
