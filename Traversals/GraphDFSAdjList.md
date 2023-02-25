@@ -1,15 +1,13 @@
-#Breadth First Search Using Adjacency List 
-##BFS Algorithm
+#Depth First Search Using Adjacency List 
+##DFS Algorithm:
 
-The general process of exploring a graph using breadth-first search includes the following steps:-
+The general process of exploring a graph using depth first search includes the following steps:-
 
 -Take the input for the adjacency matrix or adjacency list for the graph.
--Initialize a queue.
--Enqueue the root node (in other words, put the root node into the beginning of the queue).
--Dequeue the head (or first element) of the queue, then enqueue all of its neighboring nodes, starting from left to right. If a node has no neighboring nodes which need to be explored, simply dequeue the head and continue the process. (Note: If a neighbor which is already explored or in the queue appears, don’t enqueue it – simply skip it.)
--Keep repeating this process till the queue is empty.
-    
-The following is the implementation of BFS:
+-Initialize a stack.
+-Push the root node (in other words, put the root node into the beginning of the stack).
+-If the root node has no neighbors, stop here. Else push the leftmost neighboring node which hasn’t already been explored into the stack. Continue this process till a node is encountered which has no neighbors (or whose neighbors have all been added to the stack already) – stop the process then, pop the head, and then continue the process for the node which is popped.
+-Keep repeating this process till the stack becomes empty.
 
 '''java
 
@@ -80,6 +78,6 @@ public class GraphDFSAdjList {
 
 
 ##Time & Space Complexity 
-The running time complexity of the BFS in Java is O(V+E) where V is the number of nodes in the graph, and E is the number of edges.
+The running time complexity of the DFS algorithm in java is O(V+E) where V is the number of nodes in the graph, and E is the number of edges.
 
-Since the algorithm requires a queue for storing the nodes that need to be traversed at any point in time, the space complexity is O(V).
+Since the algorithm requires a stack for storing the nodes that need to be traversed at any point in time, the space complexity is the maximum size of the stack at any point of time. Since this can extend to V slots for a linear graph, the maximum space complexity is O(V).
