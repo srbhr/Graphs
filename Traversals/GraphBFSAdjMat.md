@@ -1,4 +1,4 @@
-# Breadth First Search Uisng Adjacency Matrix 
+# Breadth First Search Using Adjacency Matrix 
 
 ## BFS Algorithm
 The general process of exploring a graph using breadth-first search includes the following steps:-
