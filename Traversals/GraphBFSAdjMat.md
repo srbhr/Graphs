@@ -3,11 +3,12 @@
 ## BFS Algorithm
 The general process of exploring a graph using breadth-first search includes the following steps:-
 
--Take the input for the adjacency matrix or adjacency list for the graph.
--Initialize a queue.
--Enqueue the root node (in other words, put the root node into the beginning of the queue).
--Dequeue the head (or first element) of the queue, then enqueue all of its neighboring nodes, starting from left to right. If a node has no neighboring nodes which need to be explored, simply dequeue the head and continue the process. (Note: If a neighbor which is already explored or in the queue appears, don’t enqueue it – simply skip it.)
--Keep repeating this process till the queue is empty.
+-Take the input for the adjacency matrix or adjacency list for the graph.  
+-Initialize a queue.  
+-Enqueue the root node (in other words, put the root node into the beginning of the queue).  
+-Dequeue the head (or first element) of the queue, then enqueue all of its neighboring nodes, starting from left to right. If a node has no neighboring nodes which need to be explored, simply dequeue the head and continue the process.  
+-(Note: If a neighbor which is already explored or in the queue appears, don’t enqueue it – simply skip it.)  
+-Keep repeating this process till the queue is empty.  
 
 ```java
 import java.util.LinkedList;
