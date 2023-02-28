@@ -17,9 +17,9 @@ There are several ways to represent a graph data structure, including:
 Graph data structures are used in many applications, including network routing, social network analysis, and recommendation systems. They can be traversed and searched using algorithms such as breadth-first search (BFS) and depth-first search (DFS), and their properties can be analyzed using various graph theory concepts, such as connectivity and centrality.
 
 
-- [Adjacency Matrix Representation of Graph in Java](GraphUsingAdjacencyMatrix.java)
+- [Adjacency Matrix Representation of Graph in Java](Implementation/GraphUsingAdjacencyMatrix.java)
   
-- [Adjacency List Representation of Graph in Java](GraphUsingAdjList.java)
+- [Adjacency List Representation of Graph in Java](Implementation/GraphUsingAdjList.java)
 
 
 <br/>
@@ -31,12 +31,12 @@ Graph traversals are a way to travel and access/print the nodes in the graph. Th
 
 When you pick up a node and travel all the way down, and then check for any other node.
 
-- [DFS in Graph using Adjacency Matrix](GraphDFSAdjMat.java)
-- [DFS in Graph using Adjacency List](GraphDFSAdjList.java)
+- [DFS in Graph using Adjacency Matrix](Traversal/GraphDFSAdjMat.java)
+- [DFS in Graph using Adjacency List](Traversal/GraphDFSAdjList.java)
 
 **Breadth First Search (BFS)**
 
 When you pick up a node and traverse it's neighbours at the present depth before moving in deep. 
 
-- [BFS in Graph using Adjacency Matrix](GraphBFSAdjMat.java)
-- [DFS in Graph using Adjacency List](GraphBFSAdjList.java)
+- [BFS in Graph using Adjacency Matrix](Traversal/GraphBFSAdjMat.java)
+- [DFS in Graph using Adjacency List](Traversal/GraphBFSAdjList.java)
